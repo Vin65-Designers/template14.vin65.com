@@ -1,49 +1,43 @@
-@import 'themes/themeSettings_grey';
+@import 'themes/themeSettings_default';
 // @import 'themes/themeSettings_black';
-// @import 'themes/themeSettings_red';
-// @import 'themes/themeSettings_yellow';
 
 // Global Fonts
-$georgia: Georgia, serif;
-$lucida: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-
-// Global Colors
-$blue: #369;
-$blue-light: #3b73ac;
-$blue-dark: #2e5b87;
-$offBlack: #111;	
+$fontFamily: Georgia, serif;
+$headingFontFamily: 'Kameron', serif;
 
 // Global Variables
-$maxWidth: 990px;
-$linkColor: $blue;
+$maxWidth: 820px;
+$innerWidth: 575px;
 
-$fontColor: $offBlack;
-$fontFamily: $lucida;
+$fontColor: $fontColor;
+$fontFamily: $fontFamily;
 
-$headingFontFamily: $georgia;
-$headingColor: $grey-dark;
+$altFontColor: $altFontColor;
 
-$userToolsBackgroundColor: $black; //Background Color for usertools
-$userToolsColor: $white; //Font Color for usertools
-$userToolsLinkColor: $grey-light; //Font Color for usertools
-$userToolsHoverColor: $white; //Font Color for usertools
+$headingFontFamily: $headingFontFamily;
+$headingColor: $fontColor;
 
-$buttonFontColor: $white; // Default Color for Button Font
-$altButtonFontColor: $white; // Alt Color for Buttons Font
+$userToolsBackgroundColor: $headerFooterBackgroundColor; //Background Color for usertools
+$userToolsColor: $altFontColor; //Font Color for usertools
+$userToolsLinkColor: $buttonColor; //Font Color for usertools
+$userToolsHoverColor: lighten($altFontColor, 10%); //Font Color for usertools
 
-@mixin gradient($color1, $color2){
-	background-color: $color1;
-	background-image: -webkit-linear-gradient(top, $color1, $color2);
-	background-image: -moz-linear-gradient(top, $color1, $color2);
-	background-image: -ms-linear-gradient(top, $color1, $color2);
-	background-image: -o-linear-gradient(top, $color1, $color2);
-	background-image: linear-gradient(top, $color1, $color2);
-}
+$buttonFontColor: #fff; // Default Color for Button Font
+$altButtonFontColor: #fff; // Alt Color for Buttons Font
+
+$primaryContentBackgroundColor: #fff; //Main Content/Primary on Homepage
+$secondaryContentBackgroundColor: #f8f8f8; //Secondary on Homepage
 
 @mixin boxSizing{
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
 	box-sizing: border-box;
+}
+
+@mixin shadow($color) {
+	-webkit-box-shadow: 0 5px 25px -12px $color;
+	-moz-box-shadow: 0 5px 25px -12px $color;
+	box-shadow: 0 5px 25px -12px $color;
 }
 
 .hideText{

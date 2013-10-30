@@ -730,22 +730,16 @@ html {
 }
 
 body {
-  background-color: #f1f1f1;
-  color: #111111;
-  font-family: "Lucida Grande", "Lucida Sans Unicode", "Lucida Sans", Geneva, Verdana, sans-serif;
-  max-width: 990px;
+  background-color: #f3f3f3;
+  color: #333333;
+  font-family: Georgia, serif;
   margin: 0 auto;
-}
-@media screen and (min-width: 581px) and (max-width: 1030px) {
-  body {
-    padding: 0 10px;
-  }
 }
 
 h1, h2, h3, h4, h5, h6 {
   color: #333333;
-  font-family: Georgia, serif;
-  font-style: italic;
+  font-family: "Kameron", serif;
+  font-style: normal;
   font-weight: normal;
   margin: 0;
 }
@@ -788,9 +782,9 @@ h6 {
 
 .v65-title {
   color: #333333;
-  font-family: Georgia, serif;
+  font-family: "Kameron", serif;
   font-size: 2em;
-  font-style: italic;
+  font-style: normal;
   font-weight: normal;
   line-height: 1;
   margin-bottom: 0.5em;
@@ -799,7 +793,7 @@ h6 {
 .v65-subtitle {
   color: #333333;
   font-size: 1.5em;
-  font-family: Georgia, serif;
+  font-family: "Kameron", serif;
   font-weight: normal;
   line-height: 1;
   margin-bottom: 1em;
@@ -820,7 +814,7 @@ dd, dt, li {
 }
 
 a {
-  color: #336699;
+  color: #690011;
   text-decoration: none;
 }
 a:hover, a:focus, a:active {
@@ -838,13 +832,13 @@ form {
 }
 
 legend {
-  color: #111111;
+  color: #333333;
 }
 
 hr {
-  background-color: #111111;
+  background-color: #333333;
   border: 0;
-  color: #111111;
+  color: #333333;
   height: 1px;
 }
 
@@ -856,46 +850,43 @@ a[name=footerNav] {
      2. Header
 ======================================================================================================== */
 header.primary {
-  margin-bottom: 1em;
   position: relative;
   width: 100%;
   z-index: 10;
 }
 
+.topBar {
+  background: #333333;
+}
+
 @media screen and (max-width: 580px) {
   #user-tools {
-    border-bottom: 1px solid black;
+    border-bottom: 1px solid #000;
   }
 }
 #user-tools a {
-  color: #333333;
+  color: #bfbfbf;
 }
 
 .logo {
-  background-image: url('../images/logo.png?1380748623');
+  background-image: url('../images/logo.png?1382980950');
   background-position: top center;
   background-repeat: no-repeat;
   background-size: contain;
   display: block;
-  height: 140px;
+  height: 135px;
+  margin: 0.5em auto;
   position: relative;
-  width: 260px;
+  width: 350px;
+}
+@media screen and (max-width: 360px) {
+  .logo {
+    width: 100%;
+  }
 }
 @media screen and (-webkit-min-device-pixel-ratio: 1.5), (min-device-pixel-ratio: 1.5) {
   .logo {
-    background-image: url('../images/logo@2x.png?1382045253');
-  }
-}
-@media screen and (max-width: 767px) {
-  .logo {
-    clear: both;
-    margin: 0.5em auto 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .logo {
-    float: left;
-    margin-bottom: 0;
+    background-image: url('../images/logo@2x.png?1382980951');
   }
 }
 
@@ -904,41 +895,35 @@ header.primary {
 ======================================================================================================== */
 /* ----- a. Main Menu ----- */
 .mainMenu {
-  font-size: 13px;
+  background: #f3f3f3;
+  border-bottom: 1px solid #333333;
+  border-top: 1px solid #333333;
+  -webkit-box-shadow: 0 5px 25px -12px black;
+  -moz-box-shadow: 0 5px 25px -12px black;
+  box-shadow: 0 5px 25px -12px black;
+  font-size: 14px;
+  height: 44px;
+  line-height: 44px;
   position: relative;
+  width: 100%;
   z-index: 101;
-}
-@media screen and (max-width: 767px) {
-  .mainMenu {
-    margin: 1em 0;
-  }
-}
-@media screen and (min-width: 768px) {
-  .mainMenu {
-    float: right;
-    height: 24px;
-    margin: 80px 0 30px;
-  }
 }
 .mainMenu ul {
   list-style: none;
   margin: 0;
   padding: 0;
   position: relative;
+  text-align: center;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 580px) {
   .mainMenu ul {
-    text-align: center;
-  }
-}
-@media screen and (min-width: 768px) {
-  .mainMenu ul {
-    text-align: right;
+    display: none;
+    top: 1px;
   }
 }
 .mainMenu ul ul {
-  border: 1px solid #cccccc;
-  background: white;
+  border: 1px solid #ccc;
+  background: #fff;
   display: none;
   font-size: 12px;
   left: -10px;
@@ -966,6 +951,14 @@ header.primary {
     margin: 0 0 0 50px;
   }
 }
+@media screen and (max-width: 580px) {
+  .mainMenu li {
+    background: #f3f3f3;
+    border-bottom: 1px solid;
+    display: block;
+    margin: 0;
+  }
+}
 .mainMenu li:first-child {
   margin-left: 0;
 }
@@ -982,7 +975,7 @@ header.primary {
   width: 180px;
 }
 .mainMenu li li a {
-  color: #575757;
+  color: #333;
   display: block;
   height: 28px;
   line-height: 28px;
@@ -993,7 +986,7 @@ header.primary {
   width: 170px;
 }
 .mainMenu li li a:hover {
-  color: black;
+  color: #000;
 }
 .mainMenu a {
   color: #333333;
@@ -1017,11 +1010,11 @@ header.primary {
   }
 }
 .mainMenu a:hover {
-  color: black;
+  color: #999999;
   text-decoration: none;
 }
 .mainMenu .v65-pageAParent {
-  color: black;
+  color: #999999;
 }
 @media screen and (max-width: 919px) {
   .mainMenu .v65-home {
@@ -1029,23 +1022,17 @@ header.primary {
   }
 }
 .mainMenu .v65-selected {
-  color: black;
+  color: #999999;
   font-weight: bold;
 }
-.mainMenu .footerMenuLink {
-  bottom: 0;
+.mainMenu .mobileMenuLink {
+  display: none;
   font-size: 1.5em;
-  position: absolute;
-  right: 0;
+  position: relative;
 }
-@media screen and (max-width: 450px) {
-  .mainMenu .footerMenuLink {
+@media screen and (max-width: 580px) {
+  .mainMenu .mobileMenuLink {
     display: block;
-  }
-}
-@media screen and (min-width: 451px) {
-  .mainMenu .footerMenuLink {
-    display: none;
   }
 }
 
@@ -1056,7 +1043,7 @@ header.primary {
 }
 @media screen and (min-width: 768px) {
   .subMenu {
-    border-right: 1px solid #cccccc;
+    border-right: 1px solid #ccc;
     float: left;
     margin-right: 4%;
     padding-right: 2%;
@@ -1078,7 +1065,7 @@ header.primary {
 }
 @media screen and (max-width: 767px) {
   .subMenu li {
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid #ccc;
     line-height: 44px;
     text-align: center;
   }
@@ -1092,18 +1079,29 @@ header.primary {
   width: 100%;
 }
 .subMenu .v65-pageAParent {
-  color: black;
+  color: #000;
 }
 .subMenu .v65-leftSelected {
-  color: black;
+  color: #000;
   font-weight: bold;
 }
 
 /*   ===================================================================================================
      4. Content
 ======================================================================================================== */
+.wrapper {
+  margin: 0 auto;
+  position: relative;
+  width: 820px;
+}
+@media screen and (max-width: 820px) {
+  .wrapper {
+    width: 100%;
+  }
+}
+
 #v65-modalContentHeader {
-  background: #333333;
+  background: #333;
 }
 
 .content {
@@ -1165,7 +1163,7 @@ header.primary {
 }
 .homepageProductGroup .v65-productGroup-title {
   color: #333333;
-  font-family: Georgia, serif;
+  font-family: "Kameron", serif;
   font-size: 26px;
   line-height: 1.2;
   margin: 0.25em  0 0.5em;
@@ -1194,12 +1192,91 @@ header.primary {
   position: absolute !important;
 }
 
+.homepageProductSlider {
+  background: white;
+  border-bottom: 1px solid #333333;
+  -webkit-box-shadow: 0 5px 25px -12px black;
+  -moz-box-shadow: 0 5px 25px -12px black;
+  box-shadow: 0 5px 25px -12px black;
+  position: relative;
+}
+.homepageProductSlider .v65-product-group {
+  margin: 2em auto;
+  width: 575px;
+}
+@media screen and (max-width: 580px) {
+  .homepageProductSlider .v65-product-group {
+    width: 95%;
+  }
+}
+.homepageProductSlider .v65-productGroup-title {
+  font-family: "Kameron", serif;
+  font-size: 32px;
+}
+.homepageProductSlider .v65-productGroup-products {
+  text-align: left;
+}
+.homepageProductSlider .v65-productGroup-product {
+  margin: 0;
+  width: 100%;
+}
+.homepageProductSlider .v65-productGroup-product .productPhoto {
+  float: left;
+  max-width: 250px;
+}
+@media screen and (max-width: 580px) {
+  .homepageProductSlider .v65-productGroup-product .productPhoto {
+    max-width: 40%;
+  }
+}
+.homepageProductSlider .v65-productGroup-product .v65-product-addToCart-priceWrapper {
+  display: inline;
+}
+.homepageProductSlider ul.flex-direction-nav li a {
+  background: url(/assets/flexslider/images/direction-nav-arrows.png) no-repeat 0 0;
+  font-size: 0;
+  height: 34px;
+  width: 19px;
+}
+.homepageProductSlider ul.flex-direction-nav li a.flex-next {
+  background-position: 100% 0;
+}
+.homepageProductSlider .flex-direction-nav .flex-prev {
+  left: 0;
+}
+.homepageProductSlider .flex-direction-nav .flex-next {
+  right: 0;
+}
+.homepageProductSlider .flex-control-nav {
+  left: 0;
+  right: 0;
+}
+@media screen and (max-width: 580px) {
+  .homepageProductSlider .flex-direction-nav {
+    display: none;
+  }
+}
+
+.homepageStory {
+  margin: 0 auto;
+  width: 575px;
+}
+@media screen and (max-width: 580px) {
+  .homepageStory {
+    width: 100%;
+  }
+}
+.homepageStory img {
+  border: 1px solid #333333;
+  padding: 7px;
+}
+
 /* ----- b. Page Styles ----- */
 .backToTop {
-  background: #333333;
+  background: #333;
   bottom: 1em;
-  color: white;
-  border: 1px solid #cccccc;
+  color: #fff;
+  border: 1px solid #ccc;
   border-radius: 50%;
   display: none;
   height: 5em;
@@ -1332,137 +1409,62 @@ header.primary {
 /*   ===================================================================================================
      6. Buttons
 ======================================================================================================== */
-button span {
-  padding: 0 1em;
-}
-button.defaultBtn, button.modalBtn, button.largeBtn {
-  background-color: #3b73ac;
-  background-image: -webkit-linear-gradient(top, #3b73ac, #2e5b87);
-  background-image: -moz-linear-gradient(top, #3b73ac, #2e5b87);
-  background-image: -ms-linear-gradient(top, #3b73ac, #2e5b87);
-  background-image: -o-linear-gradient(top, #3b73ac, #2e5b87);
-  background-image: linear-gradient(top, #3b73ac, #2e5b87);
-  border: 1px solid #3b73ac;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #407fbf;
-  text-decoration: none;
-  text-shadow: 0 -1px 0 #558dc5;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-button.defaultBtn span, button.modalBtn span, button.largeBtn span {
-  background: none;
-  height: auto;
-  line-height: inherit;
-}
-button.defaultBtn:hover, button.defaultBtn:active, button.modalBtn:hover, button.modalBtn:active, button.largeBtn:hover, button.largeBtn:active {
-  background-color: #4280be;
-  background-image: -webkit-linear-gradient(top, #4280be, #34689a);
-  background-image: -moz-linear-gradient(top, #4280be, #34689a);
-  background-image: -ms-linear-gradient(top, #4280be, #34689a);
-  background-image: -o-linear-gradient(top, #4280be, #34689a);
-  background-image: linear-gradient(top, #4280be, #34689a);
-  box-shadow: inset 0 1px 0 0 #558dc5;
-}
-button.modalBtn, button.altModalBtn {
-  height: 2.5em;
-  line-height: inherit;
-}
-button.altBtn, button.altModalBtn, button.altLargeBtn {
-  background-color: #575757;
-  background-image: -webkit-linear-gradient(top, #575757, #333333);
-  background-image: -moz-linear-gradient(top, #575757, #333333);
-  background-image: -ms-linear-gradient(top, #575757, #333333);
-  background-image: -o-linear-gradient(top, #575757, #333333);
-  background-image: linear-gradient(top, #575757, #333333);
-  border: 1px solid #575757;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #575757;
-  text-decoration: none;
-  text-shadow: 0 -1px 0 black;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-}
-button.altBtn span, button.altModalBtn span, button.altLargeBtn span {
-  background: none;
-  height: auto;
-  line-height: inherit;
-}
-button.altBtn:hover, button.altBtn:active, button.altModalBtn:hover, button.altModalBtn:active, button.altLargeBtn:hover, button.altLargeBtn:active {
-  background-color: #646464;
-  background-image: -webkit-linear-gradient(top, #646464, #404040);
-  background-image: -moz-linear-gradient(top, #646464, #404040);
-  background-image: -ms-linear-gradient(top, #646464, #404040);
-  background-image: -o-linear-gradient(top, #646464, #404040);
-  background-image: linear-gradient(top, #646464, #404040);
-  box-shadow: inset 0 1px 0 0 #575757;
+/* Regular Button Styles: */
+button.defaultBtn, button.modalBtn, button.largeBtn,
+a.linkBtn, a.modalLinkBtn, a.largeLinkBtn {
+  background: #690011;
+  color: #fff;
+  padding: 0;
 }
 
-a span {
-  padding: 0 1em;
-  height: auto;
-  line-height: inherit;
+button.defaultBtn span,
+button.modalBtn span,
+button.largeBtn span,
+a.linkBtn span,
+a.modalLinkBtn span,
+a.largeLinkBtn span {
+  background: #690011;
+  border-radius: 0;
+  font-family: "Kameron", serif;
+  padding: 0 6px;
 }
-a.linkBtn, a.modalLinkBtn, a.largeLinkBtn {
-  background-color: #3b73ac;
-  background-image: -webkit-linear-gradient(top, #3b73ac, #2e5b87);
-  background-image: -moz-linear-gradient(top, #3b73ac, #2e5b87);
-  background-image: -ms-linear-gradient(top, #3b73ac, #2e5b87);
-  background-image: -o-linear-gradient(top, #3b73ac, #2e5b87);
-  background-image: linear-gradient(top, #3b73ac, #2e5b87);
-  border: 1px solid #3b73ac;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #407fbf;
-  text-decoration: none;
-  text-shadow: 0 -1px 0 #558dc5;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+button.defaultBtn span:hover,
+button.modalBtn span:hover,
+button.largeBtn span:hover,
+a.linkBtn span:hover,
+a.modalLinkBtn span:hover,
+a.largeLinkBtn span:hover {
+  background: #9c0019;
 }
-a.linkBtn span, a.modalLinkBtn span, a.largeLinkBtn span {
-  background: none;
-  height: auto;
-  line-height: inherit;
+
+button.defaultBtn {
+  width: 111px;
 }
-a.linkBtn:hover, a.linkBtn:active, a.modalLinkBtn:hover, a.modalLinkBtn:active, a.largeLinkBtn:hover, a.largeLinkBtn:active {
-  background-color: #4280be;
-  background-image: -webkit-linear-gradient(top, #4280be, #34689a);
-  background-image: -moz-linear-gradient(top, #4280be, #34689a);
-  background-image: -ms-linear-gradient(top, #4280be, #34689a);
-  background-image: -o-linear-gradient(top, #4280be, #34689a);
-  background-image: linear-gradient(top, #4280be, #34689a);
-  box-shadow: inset 0 1px 0 0 #7ba6d2;
+
+/* Alt Button Styles: */
+button.altBtn, button.altModalBtn, button.altLargeBtn,
+a.linkAltBtn, a.modalLinkAltBtn {
+  background: #777777;
+  color: #fff;
+  padding: 0;
 }
-a.linkAltBtn, a.modalLinkAltBtn, a.modalLinkAltBtn {
-  background-color: #575757;
-  background-image: -webkit-linear-gradient(top, #575757, #333333);
-  background-image: -moz-linear-gradient(top, #575757, #333333);
-  background-image: -ms-linear-gradient(top, #575757, #333333);
-  background-image: -o-linear-gradient(top, #575757, #333333);
-  background-image: linear-gradient(top, #575757, #333333);
-  border: 1px solid #575757;
-  border-radius: 3px;
-  box-shadow: inset 0 1px 0 0 #575757;
-  text-decoration: none;
-  text-shadow: 0 -1px 0 black;
-  vertical-align: middle;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+
+button.altBtn span,
+button.altModalBtn span,
+button.altLargeBtn span,
+a.linkAltBtn span,
+a.modalLinkAltBtn span {
+  background: #777777;
+  border-radius: 0;
+  font-family: "Kameron", serif;
+  padding: 0 6px;
 }
-a.linkAltBtn span, a.modalLinkAltBtn span, a.modalLinkAltBtn span {
-  background: none;
-  height: auto;
-  line-height: inherit;
-}
-a.linkAltBtn:hover, a.linkAltBtn:active, a.modalLinkAltBtn:hover, a.modalLinkAltBtn:active, a.modalLinkAltBtn:hover, a.modalLinkAltBtn:active {
-  background-color: #646464;
-  background-image: -webkit-linear-gradient(top, #646464, #404040);
-  background-image: -moz-linear-gradient(top, #646464, #404040);
-  background-image: -ms-linear-gradient(top, #646464, #404040);
-  background-image: -o-linear-gradient(top, #646464, #404040);
-  background-image: linear-gradient(top, #646464, #404040);
-  box-shadow: inset 0 1px 0 0 #575757;
-}
-a.modalLinkBtn, a.modalLinkAltBtn, a.modalLinkAltBtn {
-  min-width: auto;
+button.altBtn span:hover,
+button.altModalBtn span:hover,
+button.altLargeBtn span:hover,
+a.linkAltBtn span:hover,
+a.modalLinkAltBtn span:hover {
+  background: #919191;
 }
 
 /*   ===================================================================================================
@@ -1486,7 +1488,7 @@ footer ul {
 }
 @media screen and (max-width: 767px) {
   footer li {
-    border-top: 1px solid #cccccc;
+    border-top: 1px solid #ccc;
     line-height: 44px;
     text-align: center;
   }
@@ -1509,7 +1511,7 @@ footer li a {
   }
 }
 footer li a:hover {
-  color: black;
+  color: #999999;
 }
 footer .phone a:hover, footer .email a:hover, footer .map a:hover {
   text-decoration: none;

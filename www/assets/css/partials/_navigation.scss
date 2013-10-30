@@ -1,17 +1,18 @@
 /* ----- a. Main Menu ----- */
 .mainMenu{
-	font-size: 13px;
+	background: $backgroundColor;
+	border-bottom: 1px solid $borderColor;
+	border-top: 1px solid $borderColor;
+	@include shadow(#000);
+	font-size: 14px;
+	height: 44px;
+	line-height: 44px;
 	position: relative;
+	width: 100%;
 	z-index: 101;
 
-	@media screen and (max-width: 767px){
-		margin: 1em 0;
-	}
-
-	@media screen and (min-width: 768px){
-		float: right;
-		height: 24px;
-		margin: 80px 0 30px;
+	@media screen and (max-width: 580px){
+		// Show Menu with triple bar, hide main ul.
 	}
 
 	ul{
@@ -19,18 +20,16 @@
 		margin: 0;
 		padding: 0;
 		position: relative;
+		text-align: center;
 
-		@media screen and (max-width: 767px){
-			text-align: center;
-		}
-
-		@media screen and (min-width: 768px){
-			text-align: right;
+		@media screen and (max-width: 580px) {
+			display: none;
+			top: 1px;
 		}
 
 		ul{
-			border: 1px solid $grey-light;
-			background: $white;
+			border: 1px solid #ccc;
+			background: #fff;
 			display: none;
 			font-size: 12px;
 			left: -10px;
@@ -57,6 +56,13 @@
 			margin: 0 0 0 50px;
 		}
 
+		@media screen and (max-width: 580px) {
+			background: $backgroundColor;
+			border-bottom: 1px solid;
+			display: block;
+			margin: 0;
+		}
+
 		&:first-child{
 			margin-left: 0;
 		}
@@ -76,7 +82,7 @@
 			width: 180px;
 
 			a{
-				color: $grey;
+				color: #333;
 				display: block;
 				height: 28px;
 				line-height: 28px;
@@ -87,7 +93,7 @@
 				width: 170px;
 
 				&:hover{
-					color: $black;
+					color: #000;
 				}
 			}
 		}
@@ -133,18 +139,13 @@
 		font-weight: bold;
 	}
 
-	.footerMenuLink{
-		bottom: 0;
+	.mobileMenuLink{
+		display: none;
 		font-size: 1.5em;
-		position: absolute;
-		right: 0;
+		position: relative;
 
-		@media screen and (max-width: 450px){
+		@media screen and (max-width: 580px){
 			display: block;
-		}
-
-		@media screen and (min-width: 451px){
-			display: none;
 		}
 	}
 }
@@ -155,7 +156,7 @@
 	margin-top: 6%;
 
 	@media screen and (min-width: 768px){
-		border-right: 1px solid $grey-light;
+		border-right: 1px solid #ccc;
 		float: left;
 		margin-right: 4%;
 		padding-right: 2%;
@@ -178,7 +179,7 @@
 		line-height: 3;
 
 		@media screen and (max-width: 767px){
-			border-top: 1px solid $grey-light;
+			border-top: 1px solid #ccc;
 			line-height: 44px;
 			text-align: center;
 		}
@@ -195,11 +196,11 @@
 	}
 
 	.v65-pageAParent {
-		color: $black;
+		color: #000;
 	}
 
 	.v65-leftSelected{
-		color: $black;
+		color: #000;
 		font-weight: bold;
 	}
 

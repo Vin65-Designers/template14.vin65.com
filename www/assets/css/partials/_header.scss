@@ -1,17 +1,20 @@
 header.primary{
-	margin-bottom: 1em;
 	position: relative;
 	width: 100%;
 	z-index: 10;
 }
 
+	.topBar {
+		background: $topBarColor;
+	}
+
 	#user-tools {
 		@media screen and (max-width: 580px){
-			border-bottom: 1px solid $black;
+			border-bottom: 1px solid #000;
 		}
 
 		a {
-			color: $headerFontColor;
+			color: #bfbfbf;
 		}
 	}
 
@@ -23,21 +26,16 @@ header.primary{
 		}
 		background-size: contain;
 		display: block;
-		height: 140px;
+		height: 135px;
+		margin: 0.5em auto;
 		position: relative;
-		width: 260px;
+		width: 350px;
+
+		@media screen and (max-width: 360px) {
+			width: 100%;
+		}
 
 		@media screen and (-webkit-min-device-pixel-ratio: 1.5),	(min-device-pixel-ratio: 1.5){
 			background-image: image-url('logo@2x.png');
-		}
-		
-		@media screen and (max-width: 767px){
-			clear: both;
-			margin: 0.5em auto 0;
-		}
-
-		@media screen and (min-width: 768px){
-			float: left;
-			margin-bottom: 0;
 		}
 	}

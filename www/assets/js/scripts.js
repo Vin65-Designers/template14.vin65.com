@@ -15,15 +15,15 @@
 			});
 		}
 	},
-	home : {
-		initPhotoGallery : function(){
-			if($("#slider").length){
-				$("#slider").v65PhotoGallery({
-					galleryId : "964891e4-a231-7b8c-5b46-2cc64a607476"
-				});
-			}
-		}
-	},
+	// home : {
+	// 	initPhotoGallery : function(){
+	// 		if($("#slider").length){
+	// 			$("#slider").v65PhotoGallery({
+	// 				galleryId : "964891e4-a231-7b8c-5b46-2cc64a607476"
+	// 			});
+	// 		}
+	// 	}
+	// },
 	page : {
 		init : function(){
 			v65.page.initPhotoGallery();
@@ -145,5 +145,29 @@
 })(jQuery);
 
 v65.global.init();
-v65.home.initPhotoGallery();
+// v65.home.initPhotoGallery();
 v65.page.init();
+
+$('.v65-productGroup-product img').each(function() {
+	$(this).attr('src', $(this).attr('src').replace('thumbnails', 'large'));
+});
+
+var numOfProducts = $('.v65-productGroup-product').size();
+
+if($('.homepageProductSlider').length && numOfProducts > 1) {
+	$('.homepageProductSlider .v65-productGroup-products .v65-clear').each(function() { $(this).remove(); });
+	$('.v65-productGroup').flexslider({
+		selector: ".v65-productGroup-products > .v65-productGroup-product",
+		animation: "slide",
+		slideshow: false
+	});
+}
+
+function menuToggle() {
+	$menu = $('.mainMenu > ul');
+	if($menu.is(':visible')) {
+		$menu.slideUp();
+	} else {
+		$menu.slideDown();
+	}
+}

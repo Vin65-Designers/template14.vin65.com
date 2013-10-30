@@ -14,7 +14,7 @@
 	<script type="text/javascript" src="http://quicklaunch.vin65.com/quicklaunch.js"></script>
 	<!--//Vin65 QuickLaunch//-->
 
-	<v65:css files="/assets/css/screen.min.css"></v65:css>
+	<v65:css files="/assets/flexslider/flexslider.css,/assets/css/screen.min.css"></v65:css>
 	
 	<!--[if lt IE 9]>
 		<script src="/assets/js/html5shiv-printshiv.js"></script>
@@ -25,34 +25,41 @@
 <body>
 
 	<header class="primary v65-group">
-		<div id="user-tools">
-			<v65:modalCart></v65:modalCart>	
-			<v65:login></v65:login>
-		</div><!--/user-tools-->
+		<div class="topBar">
+			<div class="wrapper v65-group">
+				<div id="user-tools">
+					<v65:modalCart></v65:modalCart>	
+					<v65:login></v65:login>
+				</div><!--/user-tools-->
+			</div>
+		</div>
 		
 		<h1 class="logo hideText">
 			<a href="/" accesskey="h"><v65:websiteName></v65:websiteName></a>
 		</h1>
-		
+
 		<nav class="mainMenu">
+			<a href="javascript:void(0)" onclick="menuToggle.call(this)" class="mobileMenuLink"><i class="icon-menu"></i></a>
 			<v65:layoutHeaderNav depth="2"></v65:layoutHeaderNav>
-			<a href="#footerMenu" class="footerMenuLink"><i class="icon-menu"></i></a>
 		</nav>
 	</header>
 
-	<section class="content homepageContent v65-group">
+	<section class="content homepageProductSlider v65-group">
 		<a class="backToTop" href="#"><i class="icon-up-bold"></i>TOP</a>
-		
-		<div id="slider"></div>
-				
-		<article class="homepageText">
-			<v65:mainContent></v65:mainContent>
-		</article>
-		
-		<div class="homepageProductGroup">
+		<div class="wrapper">
 			<v65:product:group code="HomepageProductGroup"></v65:product:group>
 		</div>
-	</section><!--/homepageContent-->
+	</section>
+
+	<section class="content v65-group">
+		<div class="wrapper">
+			<v65:contentBlock group="Homepage Story"></v65:contentBlock>
+		</div>
+	</section>
+
+	<section class="newsletterSignup v65-group">
+		
+	</section>
 	
 	<footer>
 		<a name="footerMenu"></a>
@@ -62,8 +69,6 @@
 		</nav>
 
 		<div class="footerTools"> 
-			<v65:contentBlock group="Footer Contact Details"></v65:contentBlock>
-			
 			<ul class="legal">
 				<li><v65:copyright></v65:copyright></li>
 				<li><v65:vin65Accolade></v65:vin65Accolade></li>
@@ -71,7 +76,7 @@
 		</div><!--/footerTools-->
 	</footer>
 
-	<v65:js files="/assets/js/scripts.js,/assets/nivo/jquery.nivo.slider.pack.js"></v65:js>
+	<v65:js files="/assets/flexslider/jquery.flexslider-min.js,/assets/js/scripts.js"></v65:js>
 
 	<!--//Vin65 QuickLaunchFooter//-->
 	<script src="http://assets.vin65.com/js/vin65Footer.js" type="text/javascript"></script>

@@ -1,5 +1,15 @@
+.wrapper{
+	margin: 0 auto;
+	position: relative;
+	width: $maxWidth;
+
+	@media screen and (max-width: $maxWidth) {
+		width: 100%;
+	}
+}
+
 #v65-modalContentHeader{
-	background: $grey-dark;
+	background: #333;
 }
 
 .content{

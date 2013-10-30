@@ -1,0 +1,23 @@
+$headerFooterBackgroundColor: #f3f3f3;
+
+$buttonColor: #690011;
+$altButtonColor: #777;
+$signupButtonColor: #333;
+
+$topBarColor: #333;
+$borderColor: #333;
+$backgroundColor: #f3f3f3; //Header, Newsletter & Footer Background
+
+$fontColor: #333; // Font Color for Content
+$altFontColor: #333; // Font Color for Header/Footer
+$linkColor: $buttonColor;
+$headingFontColor: #333; // Default Heading Font Color
+
+$headerFontColor: #333; //Font Color outside the container
+$headerFontColorHover: lighten($headerFontColor, 40%); // Hover font color outside the container
+
+$footerFontColor: #333; //Font Color outside the container
+$footerFontColorHover: lighten($footerFontColor, 40%); // Hover font color outside the container
+$footerInfoColor: #404040;
+
+$boxShadowColor: #999; // Box Shadow Color
