@@ -4,40 +4,66 @@ footer{
 	text-align: center;
 	width: 100%;
 
-	ul{
-		list-style: none;
-		margin: 0 1em;
-		padding: 0;
+	nav {
+		padding: 1em 0;
 
-		@media screen and (min-width: 768px){
-			margin-bottom: 0.5em;
+		ul{
+			list-style: none;
+			margin: 0 1em;
+			padding: 0;
+
+			@media screen and (min-width: 768px){
+				margin-bottom: 0.5em;
+			}
+		}
+
+		li{
+			@media screen and (max-width: 767px){
+				border-top: 1px solid #ccc;
+				line-height: 44px;
+				text-align: center;
+			}
+
+			@media screen and (min-width: 768px){
+				display: inline;
+				padding:0 5px;
+			}
+
+			a{
+				color: $footerFontColor;
+				display: inline-block;
+				font-size: 0.917em;
+				position: relative;
+
+				@media screen and (max-width: 767px){
+					width: 100%;
+				}
+
+				&:hover{
+					color: $footerFontColorHover;
+				}
+			}
 		}
 	}
 
-	li{
-		@media screen and (max-width: 767px){
-			border-top: 1px solid #ccc;
-			line-height: 44px;
-			text-align: center;
-		}
+	.socialIcons {
+		font-size: 2em;
+		list-style: none;
+		margin: 0 0 1em;
+		padding: 0;
 
-		@media screen and (min-width: 768px){
+		li{
 			display: inline;
-			padding:0 5px;
-		}
 
-		a{
-			color: $footerFontColor;
-			display: inline-block;
-			font-size: 0.917em;
-			position: relative;
+			a{
+				color: $footerFontColor;
+				display: inline-block;
+				font-size: 0.917em;
+				position: relative;
 
-			@media screen and (max-width: 767px){
-				width: 100%;
-			}
-
-			&:hover{
-				color: $footerFontColorHover;
+				&:hover{
+					color: $footerFontColorHover;
+				}
 			}
 		}
 	}
@@ -50,6 +76,7 @@ footer{
 
 	.legal{
 		font-size: 0.917em;
+		padding: 0;
 
 		li{
 			display: block;

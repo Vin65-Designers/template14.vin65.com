@@ -82,12 +82,11 @@
 		width: $innerWidth;
 
 		@media screen and (max-width: 580px) {
-			width: 95%;
+			width: 100%;
 		}
 	}
 	.v65-productGroup-title {
-		font-family: $headingFontFamily;
-		font-size: 32px;
+		@extend h1
 	}
 
 	.v65-productGroup-products {
@@ -107,8 +106,16 @@
 			}
 		}
 
+		.v65-product-title {
+			@extend h2
+		}
+
 		.v65-product-addToCart-priceWrapper {
 			display: inline;
+
+			@media screen and (max-width: 580px) {
+				display: block;
+			}
 		}
 	}
 
@@ -144,7 +151,7 @@
 }
 
 .homepageStory {
-	margin: 0 auto; 
+	margin: 3em auto; 
 	width: $innerWidth;
 
 	@media screen and (max-width: 580px) {
@@ -153,6 +160,7 @@
 
 	img {
 		border: 1px solid $borderColor;
+		margin: 0 0 1em;
 		padding: 7px;
 	}
 }

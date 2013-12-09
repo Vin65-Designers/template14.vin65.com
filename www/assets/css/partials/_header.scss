@@ -6,6 +6,13 @@ header.primary{
 
 	.topBar {
 		background: $topBarColor;
+
+		@media screen and (max-width: 580px) {
+			.wrapper {
+				margin: 0;
+				width: 100%;
+			}
+		}
 	}
 
 	#user-tools {
@@ -30,6 +37,10 @@ header.primary{
 		margin: 0.5em auto;
 		position: relative;
 		width: 350px;
+
+		@media screen and (max-width: 580px) {
+			height: 100px;
+		}
 
 		@media screen and (max-width: 360px) {
 			width: 100%;

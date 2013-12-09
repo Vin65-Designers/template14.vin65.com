@@ -30,7 +30,7 @@
 				<div id="user-tools">
 					<v65:modalCart></v65:modalCart>	
 					<v65:login></v65:login>
-				</div><!--/user-tools-->
+				</div>
 			</div>
 		</div>
 		
@@ -38,8 +38,9 @@
 			<a href="/" accesskey="h"><v65:websiteName></v65:websiteName></a>
 		</h1>
 
-		<nav class="mainMenu">
-			<a href="javascript:void(0)" onclick="menuToggle.call(this)" class="mobileMenuLink"><i class="icon-menu"></i></a>
+		<nav class="mainMenu" id="mobileMenu">
+			<a href="#mobileMenu" class="mobileShowNav"><i class="icon-menu"></i>SHOW</a>
+			<a href="#close" class="mobileHideNav"><i class="icon-menu"></i>HIDE</a>
 			<v65:layoutHeaderNav depth="2"></v65:layoutHeaderNav>
 		</nav>
 	</header>
@@ -51,14 +52,17 @@
 		</div>
 	</section>
 
-	<section class="content v65-group">
+	<section class="subContent v65-group">
 		<div class="wrapper">
 			<v65:contentBlock group="Homepage Story"></v65:contentBlock>
 		</div>
 	</section>
 
 	<section class="newsletterSignup v65-group">
-		
+		<div class="wrapper">
+			<v65:pods location="Subscribe Header" type="title"></v65:pods>
+			<v65:subscribe contactType="Newsletter"></v65:subscribe>
+		</div>
 	</section>
 	
 	<footer>
@@ -67,6 +71,10 @@
 		<nav>
 			<v65:layoutFooterNav></v65:layoutFooterNav>
 		</nav>
+
+		<ul class="socialIcons">
+			<v65:contentBlock group="Social Icons"></v65:contentBlock>
+		</ul>
 
 		<div class="footerTools"> 
 			<ul class="legal">

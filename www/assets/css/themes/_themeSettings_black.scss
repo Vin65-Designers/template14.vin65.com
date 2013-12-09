@@ -1,27 +1,23 @@
-// Colors
-$grey: #575757;
-$grey-light: #ccc;
-$grey-dark: #333;
-$black: #000;
-$white: #fff;
-$offWhite: #f1f1f1;
+$headerFooterBackgroundColor: #333;
 
-$backgroundColor: $black;
-$headingFontColor: $grey-dark; // Default Heading Font Color
-$headerFontColor: $white; //Font Color outside the container
-$headerFontColorHover: $grey-light; // Hover font color outside the container
+$buttonColor: #2185c5;
+$altButtonColor: #777;
+$signupButtonColor: #808080;
 
-$navLinkColor: $black; //Font Color for main navigation
-$subNavLinkColor: $black; //Font Color for sub navigation
+$topBarColor: #404040;
+$borderColor: #bfbfbf;
+$backgroundColor: #333; //Header, Newsletter & Footer Background
 
-$homepageContentColor: $white; // Homepage content background color
-$contentBackgroundColor: $white; //Content background color
+$fontColor: #333; // Font Color for Content
+$altFontColor: #333; // Font Color for Header/Footer
+$linkColor: $buttonColor;
+$headingFontColor: #bfbfbf; // Default Heading Font Color
 
-$footerColor: $white; //Footer Color
-$footerLink: $white; // Footer Link
-$footerLinkHover: $grey-light; // Footer Link Hover
+$headerFontColor: #bfbfbf; //Font Color outside the container
+$headerFontColorHover: lighten($headerFontColor, 40%); // Hover font color outside the container
 
-$footerFontColor: $grey-dark; //Font Color outside the container
-$footerFontColorHover: $white; // Hover font color outside the container
+$footerFontColor: #bfbfbf; //Font Color outside the container
+$footerFontColorHover: lighten($footerFontColor, 40%); // Hover font color outside the container
+$footerInfoColor: #404040;
 
 $boxShadowColor: #999; // Box Shadow Color

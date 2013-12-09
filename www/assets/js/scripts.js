@@ -15,15 +15,6 @@
 			});
 		}
 	},
-	// home : {
-	// 	initPhotoGallery : function(){
-	// 		if($("#slider").length){
-	// 			$("#slider").v65PhotoGallery({
-	// 				galleryId : "964891e4-a231-7b8c-5b46-2cc64a607476"
-	// 			});
-	// 		}
-	// 	}
-	// },
 	page : {
 		init : function(){
 			v65.page.initPhotoGallery();
@@ -163,11 +154,15 @@ if($('.homepageProductSlider').length && numOfProducts > 1) {
 	});
 }
 
+// $("[v65js=toggleMenu]").click(function(e) {
+// 	if(document.location.hash !== "#mobileMenu"){
+// 		document.location.hash="#mobileMenu";
+// 	} else{
+// 		document.location.hash="";
+// 	}
+// 	return false;
+// });
+
 function menuToggle() {
-	$menu = $('.mainMenu > ul');
-	if($menu.is(':visible')) {
-		$menu.slideUp();
-	} else {
-		$menu.slideDown();
-	}
+	$('.mainMenu > ul').slideToggle(500);
 }

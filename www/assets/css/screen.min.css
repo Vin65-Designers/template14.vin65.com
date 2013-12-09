@@ -123,7 +123,7 @@ a:hover {
  * Address variable `h1` font-size and margin within `section` and `article`
  * contexts in Firefox 4+, Safari 5, and Chrome.
  */
-h1 {
+h1, .homepageProductSlider .v65-productGroup-title {
   font-size: 2em;
   margin: 0.67em 0;
 }
@@ -736,7 +736,7 @@ body {
   margin: 0 auto;
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, .homepageProductSlider .v65-productGroup-title, h2, .newsletterSignup .v65-podTitle, .homepageProductSlider .v65-productGroup-product .v65-product-title, h3, h4, h5, h6 {
   color: #333333;
   font-family: "Kameron", serif;
   font-style: normal;
@@ -744,13 +744,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
 }
 
-h1 {
+h1, .homepageProductSlider .v65-productGroup-title {
   font-size: 3em;
   line-height: 1;
   margin-bottom: 0.5em;
 }
 
-h2 {
+h2, .newsletterSignup .v65-podTitle, .homepageProductSlider .v65-productGroup-product .v65-product-title {
   font-size: 2.25em;
   line-height: 1.3333333333333333;
   margin-bottom: 0.6666666666666666em;
@@ -858,6 +858,12 @@ header.primary {
 .topBar {
   background: #333333;
 }
+@media screen and (max-width: 580px) {
+  .topBar .wrapper {
+    margin: 0;
+    width: 100%;
+  }
+}
 
 @media screen and (max-width: 580px) {
   #user-tools {
@@ -879,6 +885,11 @@ header.primary {
   position: relative;
   width: 350px;
 }
+@media screen and (max-width: 580px) {
+  .logo {
+    height: 100px;
+  }
+}
 @media screen and (max-width: 360px) {
   .logo {
     width: 100%;
@@ -893,6 +904,16 @@ header.primary {
 /*   ===================================================================================================
      3. Navigation
 ======================================================================================================== */
+.hideMobileNav, .showMobileNav {
+  display: none;
+}
+
+@media screen and (max-width: 580px) {
+  .showMobileNav {
+    display: block;
+  }
+}
+
 /* ----- a. Main Menu ----- */
 .mainMenu {
   background: #f3f3f3;
@@ -908,6 +929,11 @@ header.primary {
   width: 100%;
   z-index: 101;
 }
+@media screen and (min-width: 581px) {
+  .mainMenu > ul {
+    display: block !important;
+  }
+}
 .mainMenu ul {
   list-style: none;
   margin: 0;
@@ -917,7 +943,7 @@ header.primary {
 }
 @media screen and (max-width: 580px) {
   .mainMenu ul {
-    display: none;
+    display: block;
     top: 1px;
   }
 }
@@ -1009,6 +1035,12 @@ header.primary {
     line-height: 32px;
   }
 }
+@media screen and (max-width: 580px) {
+  .mainMenu a {
+    padding: 0;
+    width: 100%;
+  }
+}
 .mainMenu a:hover {
   color: #999999;
   text-decoration: none;
@@ -1030,10 +1062,21 @@ header.primary {
   font-size: 1.5em;
   position: relative;
 }
-@media screen and (max-width: 580px) {
-  .mainMenu .mobileMenuLink {
-    display: block;
-  }
+
+#mobileMenu > ul {
+  display: none;
+}
+#mobileMenu .mobileHideNav {
+  display: none;
+}
+#mobileMenu:target > ul {
+  display: block;
+}
+#mobileMenu:target .mobileHideNav {
+  display: block;
+}
+#mobileMenu:target .mobileShowNav {
+  display: none;
 }
 
 /* ----- b. Sub Menu ----- */
@@ -1096,7 +1139,8 @@ header.primary {
 }
 @media screen and (max-width: 820px) {
   .wrapper {
-    width: 100%;
+    width: 96%;
+    margin: 0 2%;
   }
 }
 
@@ -1106,7 +1150,14 @@ header.primary {
 
 .content {
   background: #fff;
+  -webkit-box-shadow: 0 0 20px #999999;
+  -moz-box-shadow: 0 0 20px #999999;
   box-shadow: 0 0 20px #999999;
+}
+
+.subContent {
+  background: #f8f8f8;
+  border-bottom: 1px solid #333333;
 }
 
 @media screen and (max-width: 767px) {
@@ -1118,6 +1169,35 @@ header.primary {
   .pageContent {
     padding: 3em;
   }
+}
+
+.newsletterSignup {
+  border-bottom: 1px solid #333333;
+  -webkit-box-shadow: 0 0 20px #999999;
+  -moz-box-shadow: 0 0 20px #999999;
+  box-shadow: 0 0 20px #999999;
+  padding: 2em 0;
+  text-align: center;
+}
+.newsletterSignup .v65-podTitle {
+  color: #333333;
+  margin-bottom: 0.5em;
+}
+.newsletterSignup input {
+  background: none;
+  border-color: #333333;
+  width: 200px !important;
+}
+@media screen and (max-width: 360px) {
+  .newsletterSignup input {
+    width: 50% !important;
+  }
+}
+.newsletterSignup .defaultBtn, .newsletterSignup .defaultBtn span {
+  background: #333333;
+}
+.newsletterSignup .defaultBtn span:hover {
+  background: #4d4d4d;
 }
 
 /* ----- a. Homepage Styles ----- */
@@ -1206,12 +1286,8 @@ header.primary {
 }
 @media screen and (max-width: 580px) {
   .homepageProductSlider .v65-product-group {
-    width: 95%;
+    width: 100%;
   }
-}
-.homepageProductSlider .v65-productGroup-title {
-  font-family: "Kameron", serif;
-  font-size: 32px;
 }
 .homepageProductSlider .v65-productGroup-products {
   text-align: left;
@@ -1231,6 +1307,11 @@ header.primary {
 }
 .homepageProductSlider .v65-productGroup-product .v65-product-addToCart-priceWrapper {
   display: inline;
+}
+@media screen and (max-width: 580px) {
+  .homepageProductSlider .v65-productGroup-product .v65-product-addToCart-priceWrapper {
+    display: block;
+  }
 }
 .homepageProductSlider ul.flex-direction-nav li a {
   background: url(/assets/flexslider/images/direction-nav-arrows.png) no-repeat 0 0;
@@ -1258,7 +1339,7 @@ header.primary {
 }
 
 .homepageStory {
-  margin: 0 auto;
+  margin: 3em auto;
   width: 575px;
 }
 @media screen and (max-width: 580px) {
@@ -1268,6 +1349,7 @@ header.primary {
 }
 .homepageStory img {
   border: 1px solid #333333;
+  margin: 0 0 1em;
   padding: 7px;
 }
 
@@ -1476,41 +1558,62 @@ footer {
   text-align: center;
   width: 100%;
 }
-footer ul {
+footer nav {
+  padding: 1em 0;
+}
+footer nav ul {
   list-style: none;
   margin: 0 1em;
   padding: 0;
 }
 @media screen and (min-width: 768px) {
-  footer ul {
+  footer nav ul {
     margin-bottom: 0.5em;
   }
 }
 @media screen and (max-width: 767px) {
-  footer li {
+  footer nav li {
     border-top: 1px solid #ccc;
     line-height: 44px;
     text-align: center;
   }
 }
 @media screen and (min-width: 768px) {
-  footer li {
+  footer nav li {
     display: inline;
     padding: 0 5px;
   }
 }
-footer li a {
+footer nav li a {
   color: #333333;
   display: inline-block;
   font-size: 0.917em;
   position: relative;
 }
 @media screen and (max-width: 767px) {
-  footer li a {
+  footer nav li a {
     width: 100%;
   }
 }
-footer li a:hover {
+footer nav li a:hover {
+  color: #999999;
+}
+footer .socialIcons {
+  font-size: 2em;
+  list-style: none;
+  margin: 0 0 1em;
+  padding: 0;
+}
+footer .socialIcons li {
+  display: inline;
+}
+footer .socialIcons li a {
+  color: #333333;
+  display: inline-block;
+  font-size: 0.917em;
+  position: relative;
+}
+footer .socialIcons li a:hover {
   color: #999999;
 }
 footer .phone a:hover, footer .email a:hover, footer .map a:hover {
@@ -1518,6 +1621,7 @@ footer .phone a:hover, footer .email a:hover, footer .map a:hover {
 }
 footer .legal {
   font-size: 0.917em;
+  padding: 0;
 }
 footer .legal li {
   display: block;
