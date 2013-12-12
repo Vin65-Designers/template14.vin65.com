@@ -70,6 +70,12 @@
 		}
 }
 
+input {
+	-webkit-appearance: none;
+    -webkit-border-radius:0; 
+    border-radius:0;
+}
+
 
 /* ----- a. Homepage Styles ----- */
 @import 'content_home';

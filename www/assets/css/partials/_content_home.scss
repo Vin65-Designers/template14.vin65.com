@@ -60,17 +60,6 @@
 			}
 }
 
-#slider{
-	height: 0;
-	padding-top: 35%;
-	overflow: hidden;
-	width: 100%;
-
-	.nivo-main-image{
-		position: absolute !important;
-	}
-}
-
 .homepageProductSlider {
 	background: $primaryContentBackgroundColor;
 	border-bottom: 1px solid $borderColor;
@@ -124,6 +113,7 @@
 		font-size: 0;
 		height: 34px;
 		width: 19px;
+		z-index: 0;
 
 		&.flex-next {
 			background-position: 100% 0;
@@ -135,11 +125,6 @@
 	}
 
 	.flex-direction-nav .flex-next {
-		right: 0;
-	}
-
-	.flex-control-nav {
-		left: 0;
 		right: 0;
 	}
 
